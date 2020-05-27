@@ -9,11 +9,10 @@ namespace Crud_project.Models
     public class NewReceiptClass
     {
         [Key]
-
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Enter Item")]
-        [Display (Name = "Item")]
+        [Display (Name = "Items")]
         public string Item { get; set; }
 
         [Required(ErrorMessage = "Enter Quantity")]

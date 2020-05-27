@@ -26,10 +26,7 @@ namespace Crud_project
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(
-                Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDbContext<ApplicationDbContext>(options => options.use(Configuration.GetConnectionString("Myconnection")));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Myconnection")));
 
         }
 
@@ -57,7 +54,7 @@ namespace Crud_project
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Receipt}/{action=Index}/{id?}");
             });
         }
     }
